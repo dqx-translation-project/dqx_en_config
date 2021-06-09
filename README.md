@@ -6,6 +6,8 @@ Script that generates translated hex to paste into a hex editor for a translated
 
 **Images in `imgs` directory are owned by Square Enix and edited by Lightpost on the Dragon's Den forums.**
 
+**Thanks Shobu for helping with the translations.**
+
 https://www.woodus.com/forums/topic/36234-dragon-quest-x-online-config-translated-executable/
 
 # How to use
