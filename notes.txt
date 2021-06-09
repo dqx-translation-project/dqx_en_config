@@ -1,0 +1,15 @@
+- copy all hex in exe at bottom using a hex editor that supports utf8 encoding (wxMEdit)
+  - hex starts at '54 45 58 54 10 00 00 00 F0 1E 01 00 00 00 00 00' for settings
+  - hex starts at '54 45 58 54 10 00 00 00 C0 02 00 00 00 00 00 00' for buttons
+  - copy until FOOT found
+- paste into text editor and replace:
+  - 0a with 7c
+  - 00 with 0a
+  - this ends up being the "base" file
+- this data has already been converted to json and translated in settings.json
+- run transform.ahk, which will spit out a hexFinal_settings.txt file
+- copy all this text and paste exactly what was copied out of the hex editor back into the hex editor in the same exact place
+- assuming this was done correctly, save the file and the exe is translated
+
+thoughts:
+- maybe try scripting this out with xxd
