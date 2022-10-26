@@ -4,7 +4,7 @@ import requests
 from shutil import copy
 
 
-orig_dqx_config = "configs/DQXConfig"
+orig_dqx_config = "configs/DQXConfig.exe"
 
 FILE_LIST = {
     b"\x49\x4E\x44\x58\x10\x00\x00\x00\x60\x13\x00\x00\x00\x00\x00\x00\xB7\x37\x01\x00\x00\x00\x00": "game_settings.json",
