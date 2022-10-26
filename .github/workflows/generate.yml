@@ -3,8 +3,8 @@ name: "generate-exe"
 
 on:
   push:
-    branches:
-      - "dev"
+    tags:
+      - "v*.*.*"
 
 jobs:
   generate-exe:
