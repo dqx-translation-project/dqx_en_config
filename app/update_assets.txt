@@ -1,0 +1,12 @@
+[FILENAMES]
+Open=DQXConfig.exe
+Save=DQXConfig.exe
+Log=DQXConfig.log
+[COMMANDS]
+-modify ../imgs/PNG150.png, PNG, 150
+-modify ../imgs/PNG254.png, PNG, 254
+-modify ../imgs/PNG255.png, PNG, 255
+-modify ../imgs/PNG256.png, PNG, 256
+-modify ../imgs/PNG259.png, PNG, 259
+-modify ../imgs/PNG260.png, PNG, 260
+-modify ../imgs/PNG262.png, PNG, 262
