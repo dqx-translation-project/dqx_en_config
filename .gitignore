@@ -1,5 +1,4 @@
+*.log
+ResourceHacker.ini
 __pycache__
-hyde_json_merge/src/*.json
-hyde_json_merge/dst/*.json
-hyde_json_merge/out/*.json
-*.exe
+app/DQXConfig.exe

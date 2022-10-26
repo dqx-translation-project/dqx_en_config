@@ -1,32 +1,28 @@
 # dqx_en_config
 
-Python scripts that generate hex to paste into a hex editor for a translated English DQX settings client.
+Scripts to convert `DQXConfig.exe` into English.
 
-**I do not own or work for DQX and am purely doing this to be able to understand the client in my native language (English)**
+# Background
 
-**Images in `imgs` directory are owned by Square Enix and edited by Lightpost on the Dragon's Den forums.**
-
-https://www.woodus.com/forums/topic/36234-dragon-quest-x-online-config-translated-executable/
+The string tables are ETP files, which are the same type of files seen for DQX's game text. Although you can dump the ETP files directly from `DQXConfig.exe`, they are also packed with the game's dat files. This repo uses the files in the game's dats, instead of the executable, as we mass upload these into our translation platform, Weblate. This script will pull the translated ETPs from Weblate and import them into `DQXConfig.exe`, giving you a ready-to-use executable.
 
 # How to use
 
-- Open `DQXConfig.exe` with a hex editor like wxMEdit (something that supports utf-8)
-- Search for `45 56 54 58 10`. This indicates the start of text
-- Copy from the first byte that has string data all the way to the last string right before "FOOT"
-- Paste the bytes into `app/<file>_orig.hex` (one for controls and one for settings)
-- Run `main.py` to generate easily-read json files for both of these hex dumps
-- Port over (with `hyde_json_merge`) or translate the json files
-  - If using `hyde_json_merge`:
-    - You need to put the `orig` file in the `src` dir and remove `_orig`
-    - You need to put the `new` file in the `dst` dir and remove `_new`
-    - Rename both files to add `_new` in the `out` dir and put them in `app`
-- Run `parse.py` to generate `app/<file>_new.hex` (one for controls and one for settings)
-- Copy the hex in each file and paste directly over the bytes in your hex editor
-- Save the executable
-- If desired, open your edited `DQXConfig.exe` with `ResourceHacker` and replace with assets in `imgs`
+- Place an updated `DQXConfig.exe` into the `app/configs` directory
+- Run `pip install -r requirements.txt` to install necessary modules (in a venv if you prefer)
+- `cd` into the `app` directory
+- Run `python main.py` to read in the ETPs from the dqx_translations repository and write them into the executable
+- Run `.\port_assets.bat` to move the images into the executable
+- Finished executable is in the app folder and ready to be used
 
 # How to install
 
 - Back up `C:\Program Files (x86)\SquareEnix\DRAGON QUEST X\Game\DQXConfig.exe` (rename it to `DQXConfig.orig.exe` or something)
 - Paste the patched config exe (see releases on the right) into this directory
 - Have fun
+
+**I do not own or work for DQX and am purely doing this to be able to understand the client in my native language (English)**
+
+**Images in `imgs` directory are owned by Square Enix and edited by Lightpost on the Dragon's Den forums.**
+
+https://www.woodus.com/forums/topic/36234-dragon-quest-x-online-config-translated-executable/
