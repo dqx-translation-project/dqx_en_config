@@ -2,18 +2,22 @@
 
 Scripts to convert `DQXConfig.exe` into English.
 
+# How to install
+
+Check out the help site [here](https://dqx-translation-project.github.io/dqxconfig.html).
+
 # Background
 
 The string tables are ETP files, which are the same type of files seen for DQX's game text. Although you can dump the ETP files directly from `DQXConfig.exe`, they are also packed with the game's dat files. This repo uses the files in the game's dats, instead of the executable, as we mass upload these into our translation platform, Weblate. This script will pull the translated ETPs from Weblate and import them into `DQXConfig.exe`, giving you a ready-to-use executable.
 
-# How to use (automagically)
+# How to release (automagically)
 
 - Push your changes to the `main` branch (like a new `DQXConfig.exe`)
 - Tag it (`git tag vTAG_NUM`)
 - Push it (`git push origin vTAG_NUM`)
 - New executable will be updated to releases
 
-# How to use (manually)
+# How to release (manually)
 
 - Place an updated `DQXConfig.exe` into the `app/configs` directory
 - Run `pip install -r requirements.txt` to install necessary modules (in a venv if you prefer)
@@ -21,14 +25,6 @@ The string tables are ETP files, which are the same type of files seen for DQX's
 - Run `python main.py` to read in the ETPs from the dqx_translations repository and write them into the executable
 - Run `.\port_assets.bat` to move the images into the executable
 - Finished executable is in the app folder and ready to be used
-
-# How to install
-
-- Back up `C:\Program Files (x86)\SquareEnix\DRAGON QUEST X\Game\DQXConfig.exe` (rename it to `DQXConfig.orig.exe` or something)
-- Paste the patched config exe (see releases on the right) into this directory
-- Have fun
-
-**I do not own or work for DQX and am purely doing this to be able to understand the client in my native language (English)**
 
 **Images in `imgs` directory are owned by Square Enix and edited by Lightpost on the Dragon's Den forums.**
 
