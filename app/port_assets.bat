@@ -1,1 +1,1 @@
-.\utilities\ResourceHacker.exe -script update_assets.txt
+..\utilities\ResourceHacker.exe -script update_assets.txt
