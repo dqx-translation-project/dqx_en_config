@@ -1,4 +1,4 @@
-*.log
-ResourceHacker.ini
-__pycache__
-app/DQXConfig.exe
+app/*.json
+app/*.exe
+app/*.log
+utilities/*.ini
