@@ -42,8 +42,8 @@ jobs:
       - name: Port translations to new ETP
         working-directory: dqx_dat_dump/tools/packing
         run: |
-          python pack_etp.py -j ${{ github.workspace }}/dqx_translations/json/_lang/en/adhoc_game_settings.json -e ${{ github.workspace }}/assets/ETP/ETP193.bin
-          python pack_etp.py -j ${{ github.workspace }}/dqx_translations/json/_lang/en/adhoc_controller_buttons_2.json -e ${{ github.workspace }}/assets/ETP/ETP247.bin
+          python pack_etp.py -j ${{ github.workspace }}/dqx_translations/json/_lang/en/eventTextEtcWindowsconfigtoolsClient.win32.json -e ${{ github.workspace }}/assets/ETP/ETP193.bin
+          python pack_etp.py -j ${{ github.workspace }}/dqx_translations/json/_lang/en/eventTextEtcWindowsgamepadmousesClient.win32.json -e ${{ github.workspace }}/assets/ETP/ETP247.bin
 
       - name: Move new ETPs to assets
         working-directory: assets/ETP
